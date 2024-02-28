@@ -9,10 +9,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Material App',
+      title: 'BUDGETTRACK',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('SUPLEMENTOS GYM'),
+          title: const Text('BUDGETTRACK', style: TextStyle(fontSize: 30,color: Color.fromARGB(255, 32, 57, 154),fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontFamily: 'Times New Roman')),
           leading: Builder(
             builder: (BuildContext context) {
               return IconButton(
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
             //     Text('Gimnasio', style: TextStyle(fontSize: 30,color: Colors.blueGrey,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontFamily: 'Roboto')),
             //     ],
             //   ),
-              Image.network('https://blog.laminasyaceros.com/hs-fs/hubfs/suplementos-gym.jpg?width=537&height=245&name=suplementos-gym.jpg'),
+              Image.asset('assets/images/logotipo.png', width: 300, height: 300),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -58,28 +58,38 @@ class MyApp extends StatelessWidget {
                   decoration: const BoxDecoration(
                     color: Colors.blue,
                   ),
-                  child: const Text('Menu', style: TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontFamily: 'Roboto')),
+                  child: Image.asset('assets/images/logotipo-SinFondo.png', width: 300, height: 300),
+                  // const Text('Menu', style: TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontFamily: 'Roboto')),
                 ),
               ),
               ListTile(
-                title: const Text('Inicio'),
+                leading: Image.asset('assets/images/logo-Gastos.png', width: 50, height: 50),
+                title: const Text('Saldo'),
                 onTap: () {
                   Navigator.pop(context);
                 },
+                subtitle: const Text('Ingresos y Egresos', style: TextStyle(fontSize: 10)),
               ),
               ListTile(
-                title: const Text('Productos'),
+                title: const Text('Gastos'),
                 onTap: () {
                   Navigator.pop(context);
                 },
-                subtitle: const Text('Proteina, Creatina, Aminoacidos, Multivitaminicos', style: TextStyle(fontSize: 10)),
+                subtitle: const Text('Apartados y Categorias', style: TextStyle(fontSize: 10)),
               ),
               ListTile(
-                title: const Text('Contacto'),
+                title: const Text('Perfil'),
                 onTap: () {
                   Navigator.pop(context);
                 },
-                subtitle: const Text('Telefono, Correo, Redes Sociales', style: TextStyle(fontSize: 10)),
+                subtitle: const Text('Usuario, Correo', style: TextStyle(fontSize: 10)),
+              ),
+              ListTile(
+                title: const Text('Configuracion'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                subtitle: const Text('Divisa, Tema, Idioma/Region', style: TextStyle(fontSize: 10)),
               ),
             ],
           ),

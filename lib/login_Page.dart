@@ -23,8 +23,8 @@ class LoginPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Image.asset('assets/images/logotipo.png', width: 250, height: 250),
-            Image.asset('assets/images/perfil.png', width: 150, height: 150),
+            Image.asset('assets/images/logotipo.png', width: 200, height: 200),
+            Image.asset('assets/images/perfil.png', width: 100, height: 100),
             SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0), // Espacio horizontal de 20 píxeles

@@ -1,5 +1,7 @@
 // main_page.dart
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_application_1/budget.dart';
 
 List<String> productos = ['Saldo', 'Gastos'];
 
@@ -36,7 +38,6 @@ class MainPage extends StatelessWidget {
                 },
               ),
             ),
-            // Otros widgets pueden ir aquí
           ],
         ),
         drawer: Drawer(
@@ -57,7 +58,10 @@ class MainPage extends StatelessWidget {
                 leading: Image.asset('assets/images/logo-Gastos.png', width: 50, height: 50),
                 title: const Text('Saldo'),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => budget()),
+                  );
                 },
                 subtitle: const Text('Ingresos y Egresos', style: TextStyle(fontSize: 10)),
               ),

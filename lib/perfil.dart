@@ -1,41 +1,21 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Perfil',
-      debugShowCheckedModeBanner: false,
-      home: ProfileScreen(),
-    );
-  }
-}
 
 class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () => Navigator.pop(context),
         ),
         title: Row(
           children: [
-            CircleAvatar(
-              backgroundColor: Colors.grey,
-              radius: 16,
-              child: Icon(Icons.person, color: Colors.white),
-            ),
             SizedBox(width: 8),
-            Text(
-              'Usuario',
-              style: TextStyle(fontSize: 18),
-            ),
+            Text('BUDGETTRACK', style: TextStyle(fontSize: 30,color: Color.fromARGB(255, 32, 57, 154),fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontFamily: 'Times New Roman'))
           ],
         ),
         centerTitle: true,
@@ -45,8 +25,16 @@ class ProfileScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Image.asset('assets/images/perfil.png', width: 150, height: 150),
+            Text('@UserName',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                )
+            ),
+            SizedBox(height: 40),
             SizedBox(
-              width: 200,
+              width: 200, height: 50,
               child: ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
@@ -62,7 +50,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
             SizedBox(
-              width: 200,
+              width: 200, height: 50,
               child: ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
